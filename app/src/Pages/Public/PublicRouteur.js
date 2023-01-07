@@ -3,17 +3,19 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { Home, Apropos, Logement } from '@/Pages/Public/Index';
 
 import Layout from '@/Layouts/Layout';
-import Erreur404 from '@/Pages/Public/404/404';
+import Erreur404 from '@/Pages/Public/Error404/Error404';
 
 const PublicRouteur = () => {
     return (
         <Routes>
-            <Route element={<Layout></Layout>}>
+            <Route element={<Layout />}>
                 <Route path="" element={<Navigate to="/home" />} />
-                <Route path="/home" element={<Home></Home>} />
-                <Route path="/logement/:id" element={<Logement></Logement>} />
-                <Route path="/a-propos" element={<Apropos></Apropos>} />
-                <Route path="*" element={<Erreur404></Erreur404>} />
+
+                <Route path="/home" element={<Home />} />
+                <Route path="/logement/:id" element={<Logement />} />
+                <Route path="/a-propos" element={<Apropos />} />
+
+                <Route path="*" element={<Erreur404 />} />
             </Route>
         </Routes>
     )
