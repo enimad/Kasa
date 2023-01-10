@@ -1,0 +1,18 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 100px 0;
+    margin-bottom: 63px;
+}
+
+li {
+    display: inline-block;
+    margin-left: 57px;
+    color: #FF6060;
+    font-size: x-large;
+}
+
+li:hover {
+    text-decoration: underline;
+}

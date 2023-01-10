@@ -1,0 +1,17 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    padding: 66px 0 29px;
+}
+
+/* .logo_footer {
+    margin-top: 66px;
+} */
+
+.footer p {
+    margin: 29px 0 0 0;
+}
