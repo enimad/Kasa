@@ -1,0 +1,22 @@
+.logo_404 {
+    margin-top: 103px;
+}
+
+.error404 h1,
+a {
+    color: #FF6060;
+}
+
+.error404 h1 {
+    font-size: 36px;
+    font-weight: 400;
+    margin: 66px 0 182px;
+}
+
+.error404 a {
+    font-size: 18px;
+}
+
+.error404 a:hover {
+    text-decoration: underline;
+}
