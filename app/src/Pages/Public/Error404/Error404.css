@@ -1,15 +1,17 @@
-.logo_404 {
+.error404-logo {
     margin-top: 103px;
 }
 
 .error404 h1,
+p,
 a {
+    font-family: 'Montserrat', sans-serif;
     color: #FF6060;
 }
 
 .error404 h1 {
     font-size: 36px;
-    font-weight: 400;
+    font-weight: 500;
     margin: 66px 0 182px;
 }
 
@@ -19,4 +21,32 @@ a {
 
 .error404 a:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px) {
+    .error404-logo {
+        width: 40%;
+    }
+
+    .error404 h1 {
+        font-size: 26px;
+        padding: 0 60px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .error404-logo {
+        margin-top: 179px;
+        width: 198px;
+        height: 99px;
+    }
+
+    .error404 h1 {
+        font-size: 18px;
+        margin: 11px 0 133px;
+    }
+
+    .error404 a {
+        font-size: 14px;
+    }
 }

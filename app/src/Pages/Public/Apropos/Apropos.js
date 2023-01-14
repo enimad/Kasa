@@ -1,10 +1,13 @@
 import React from 'react';
+import "@/Pages/Public/Apropos/Apropos.css";
+import Banner from "@/Components/Banner/Banner";
+import BannerImg from "@/Assets/Images/Pages/Apropos/bannerapropos.png";
 
 const Apropos = () => {
     return (
-        <div className='apropos'>
-            Apropos Works !
-        </div>
+        <section className='apropos'>
+            <Banner img={BannerImg} texte="" />
+        </section>
     );
 };
 

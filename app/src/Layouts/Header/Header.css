@@ -5,13 +5,50 @@
     margin: 40px 100px 63px;
 }
 
-li {
-    display: inline-block;
-    margin-left: 57px;
-    color: #FF6060;
-    font-size: x-large;
+.header ul {
+    display: flex;
+    align-items: center;
 }
 
-li:hover {
+.header li {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 57px;
+    color: #FF6060;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.header li:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        margin: 40px 60px 39px;
+    }
+
+    .header li {
+        margin-left: 35px;
+        font-size: 20px;
+    }
+
+    .header-logo {
+        width: 175px
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .header {
+        margin: 20px 20px 16px;
+    }
+
+    .header li {
+        margin-left: 10px;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    .header-logo {
+        width: 145px;
+    }
 }

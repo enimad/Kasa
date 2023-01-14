@@ -1,51 +1,29 @@
-.section-banner {
-    position: relative;
-    margin: 0 100px 43px;
-}
-
-.img_section-banner {
-    filter: brightness(75%);
-    border-radius: 20px;
-    width: 100%;
-}
-
-.section-banner h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-weight: 400;
-    font-size: 50px;
-    letter-spacing: 2px;
-    width: 100%;
-}
-
-.section-cards {
+.sectionLogements {
+    background-color: #f6f6f6;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px 50px;
+    padding: 56px 50px;
     margin: 0 100px;
-    padding: 56px;
-    background-color: #F6F6F6;
-    border-radius: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-between;
 }
 
-.card {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 340px;
-    height: 340px;
-    border-radius: 10px;
-    background-image: linear-gradient(180deg, #FF6060 65%, #000000 140%);
+@media screen and (max-width: 1024px) {
+    .sectionLogements {
+        background-color: unset;
+        gap: 20px 20px;
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
+        margin: 0 60px;
+    }
 }
 
-.card h2 {
-    color: #FFFFFF;
-    width: 300px;
-    height: 52px;
-    font-weight: 400;
+@media screen and (max-width: 640px) {
+    .sectionLogements {
+        background-color: unset;
+        gap: 20px 0;
+        grid-template-columns: 1fr;
+        padding: 0;
+        margin: 0 20px;
+    }
 }

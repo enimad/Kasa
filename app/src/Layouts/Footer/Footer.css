@@ -1,14 +1,30 @@
 .footer {
-    display: flex;
-    flex-direction: column;
+    position: relative;
+    bottom: 0;
+    width: 100%;
     background-color: black;
-    color: white;
-    align-items: center;
-    justify-content: center;
     padding: 66px 0 29px;
     margin-top: 63px;
 }
 
 .footer p {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
     margin: 29px 0 0 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .footer {
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .footer {
+        position: absolute;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
 }
