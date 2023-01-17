@@ -13,17 +13,7 @@
     margin: 29px 0 0 0;
 }
 
-@media screen and (max-width: 1024px) {
-    .footer {
-        position: absolute;
-    }
-}
-
 @media screen and (max-width: 640px) {
-    .footer {
-        position: absolute;
-    }
-
     .footer p {
         font-size: 12px;
     }

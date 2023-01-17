@@ -2,7 +2,7 @@
     position: relative;
     height: 100%;
     min-height: 111px;
-    margin: 0 100px 43px;
+    margin: 0 100px;
 }
 
 .banner-img {
@@ -37,7 +37,7 @@
 
 @media only screen and (max-width: 1024px) {
     .banner {
-        margin: 0 60px 43px;
+        margin: 0 60px;
     }
 
     .banner-img {
@@ -55,7 +55,7 @@
 
 @media only screen and (max-width: 640px) {
     .banner {
-        margin: 0 20px 22px;
+        margin: 0 20px;
     }
 
     .banner-img {
