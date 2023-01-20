@@ -1,3 +1,7 @@
+.apropos {
+    margin-top: 44px;
+}
+
 .apropos-dropdowns {
     display: flex;
     flex-direction: column;
@@ -6,23 +10,21 @@
 }
 
 @media screen and (max-width: 1024px) {
+    .apropos {
+        margin-top: 30px;
+    }
+
     .apropos-dropdowns {
         margin: 0 60px;
     }
 }
 
 @media screen and (max-width: 640px) {
+    .apropos {
+        margin-top: 17px;
+    }
+
     .apropos-dropdowns {
         margin: 0 20px;
     }
-
-    /* .banner-sombre {
-        height: 223px;
-    }
-
-    L'IMAGE DE BANNER N'EST PAS LA MEME
-
-    .banner-img {
-        height: 223px;
-    } */
 }

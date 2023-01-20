@@ -1,0 +1,72 @@
+.logement {
+    margin: 20px 100px 0;
+}
+
+.logement-infos {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tags {
+    margin-top: 20px;
+
+    display: flex;
+    gap: 10px;
+}
+
+.logement-profil-stars-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.logement-dropdown {
+    display: flex;
+    gap: 76px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .logement {
+        margin: 23px 60px 0;
+    }
+
+    .tags {
+        margin-top: 15px;
+    }
+
+    .logement-dropdown {
+        gap: 36px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .logement {
+        margin: 27px 20px 0;
+    }
+
+    .logement-infos {
+        display: unset;
+    }
+
+    .logement-infos-tags-wrapper {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .logement-profil-stars-wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .tags {
+        margin-top: 10px;
+        flex-wrap: wrap;
+    }
+
+    .logement-dropdown {
+        display: unset;
+    }
+}
