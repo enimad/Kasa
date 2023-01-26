@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import "@/Pages/Public/Logements/Logement.css";
 
@@ -9,41 +10,67 @@ import Profil from '@/Components/Profil/Profil';
 import Stars from '@/Components/Stars/Stars';
 import DropDown from '@/Components/DropDown/DropDown';
 
-import Arrow from '@/Assets/Images/Components/Carroussel/bigarrow.png';
-import StarFull from '@/Assets/Images/Components/Stars/fullstar.png';
-import StarEmpty from '@/Assets/Images/Components/Stars/emptystar.png';
-
-import DDArrow from '@/Assets/Images/Components/DropDown/arrow.png';
-
-
+import ServiceLogement from "@/_Services/logements.service.js";
 
 const Logement = () => {
+
+    const [logement, setlogement] = useState({});
+    const [waiting, setwaiting] = useState(true);
+    let { id } = useParams();
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+
+        getInfo();
+
+    }, [])
+
+    const getInfo = async () => {
+        await ServiceLogement.GetLogementById(id)
+            .then((data) => {
+                setlogement(data);
+                if (data === undefined) {
+                    navigate("/404");
+                }
+                setwaiting(false);
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+    }
+
+    if (waiting) return (<h3 className='loading'>Chargement...</h3>)
+
     return (
         <div className='logement'>
 
-            <Carroussel image="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg" arrow={Arrow} number="1" totalnumber="4" />
+            <Carroussel image={logement.pictures} />
 
             <section className='logement-infos'>
                 <div className='logement-infos-tags-wrapper'>
-                    <InfosLogement title="Appartement cosy" location="Ile de France - Paris 17e" />
+                    <InfosLogement title={logement.title} location={logement.location} />
                     <ul className='tags'>
-                        <Tags nameTag="Batignolle" />
-                        <Tags nameTag="Montmartre" />
-                        <Tags nameTag="Paris" />
+                        {
+                            logement.tags.map((tag) =>
+                            (
+                                <Tags key={tag} nameTag={tag} />
+                            ))}
                     </ul>
                 </div>
                 <div className='logement-profil-stars-wrapper'>
-                    <Profil name="Nathalie Jean" picture="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg" />
-                    <Stars full={StarFull} empty={StarEmpty} />
+                    <Profil name={logement.host.name} picture={logement.host.picture} />
+                    <Stars rating={logement.rating} />
                 </div>
             </section>
             <section className='logement-dropdown'>
-                <DropDown title="Description" image={DDArrow} content="Votre maison loin de chez vous. Que vous veniez de l'autre bout du monde, ou juste de quelques stations de RER, vous vous sentirez chez vous dans notre appartement." />
-                <DropDown title="Equipments" image={DDArrow} content="Équipements de base" />
+                <DropDown title="Description" content={<p>{logement.description}</p>} fontsize="special-fontsize" />
+                <DropDown title="Équipements" content={logement.equipments.map((equipment) => (<p key={equipment}>{equipment}</p>))} fontsize="special-fontsize" />
             </section >
 
         </div >
     );
+
 };
 
 export default Logement;

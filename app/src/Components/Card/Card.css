@@ -44,3 +44,11 @@
     max-width: 310px;
     padding-right: 20px;
 }
+
+@media only screen and (max-width: 1024px) {}
+
+@media only screen and (max-width: 640px) {
+    .card {
+        min-height: 255px;
+    }
+}

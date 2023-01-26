@@ -3,15 +3,14 @@ import React from 'react';
 import "@/Pages/Public/Apropos/Apropos.css";
 
 import Banner from "@/Components/Banner/Banner";
-import BannerImg from "@/Assets/Images/Pages/Apropos/bannerapropos.png";
-
 import DropDown from '@/Components/DropDown/DropDown';
+
 import Arrow from '@/Assets/Images/Components/DropDown/arrow.png';
 
 const Apropos = () => {
     return (
         <section className='apropos'>
-            <Banner img={BannerImg} texte="" />
+            <Banner image="apropos-banner" texte="" />
             <div className='apropos-dropdowns'>
                 <DropDown title="Fiabilité" image={Arrow} content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes." />
                 <DropDown title="Respect" image={Arrow} content="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme." />

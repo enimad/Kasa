@@ -9,18 +9,18 @@
     height: 223px;
     width: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 25px;
 }
 
 .banner-sombre {
-    height: 223px;
+    height: inherit;
     width: 100%;
     position: absolute;
     left: 0;
     top: 0;
     background-color: #000000;
-    opacity: 0.4;
-    border-radius: 10px;
+    opacity: 0.2;
+    border-radius: 25px;
 }
 
 .banner h1 {
@@ -42,10 +42,11 @@
 
     .banner-img {
         height: 164px;
+        border-radius: 18px;
     }
 
     .banner-sombre {
-        height: 164px;
+        border-radius: 18px;
     }
 
     .banner h1 {
@@ -60,10 +61,11 @@
 
     .banner-img {
         height: 111px;
+        border-radius: 10px;
     }
 
     .banner-sombre {
-        height: 111px;
+        border-radius: 10px;
     }
 
     .banner h1 {

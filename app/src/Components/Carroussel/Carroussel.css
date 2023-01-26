@@ -1,45 +1,44 @@
 .carroussel {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100%;
     position: relative;
-    height: 100%;
-    height: 415px;
 }
 
-.carroussel-image {
+.carrousselSlider {
+    white-space: nowrap;
+    transition: ease 1000ms;
+}
+
+.slide {
+    display: inline-block;
+    background-size: cover;
     height: 415px;
     width: 100%;
-    object-fit: cover;
     border-radius: 25px;
 }
 
-.carroussel-image-sombre {
-    height: 415px;
-    width: 100%;
+.leftArrow {
     position: absolute;
-    left: 0;
-    top: 0;
-    background-color: #000000;
-    opacity: 0.2;
-    border-radius: 25px;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+    cursor: pointer;
 }
 
-.carroussel-arrowleft {
+.rightArrow {
     position: absolute;
-    left: 20px;
-    top: 38%;
-    bottom: 35%;
-
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+    cursor: pointer;
 }
 
-.carroussel-arrowright {
+.slideNumber {
     position: absolute;
-    right: 20px;
-    top: 38%;
-    bottom: 35%;
-    transform: rotate(180deg);
-}
-
-.carroussel-number {
-    position: absolute;
+    width: 50px;
     left: 48.95%;
     right: 49.11%;
     top: 86.19%;
@@ -48,7 +47,7 @@
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
-    line-height: 26px;
+    line-height: 142.6%;
     display: flex;
     align-items: flex-end;
     text-align: center;
@@ -56,53 +55,34 @@
 }
 
 @media only screen and (max-width: 1024px) {
-    .carroussel {
-        height: 360px;
+    .slide {
+        height: 300px;
     }
 
-    .carroussel-image {
-        height: 360px;
+    .leftArrow {
+        height: 42px;
     }
 
-    .carroussel-image-sombre {
-        height: 360px;
+    .rightArrow {
+        height: 42px;
     }
-
-    .carroussel-arrowleft,
-    .carroussel-arrowright {
-        width: 35px;
-        top: 40%;
-    }
-
-    .carroussel-number {
-        font-size: 14px;
-        top: 93.19%;
-        bottom: 19.01%;
-    }
-
 }
 
 @media only screen and (max-width: 640px) {
-    .carroussel {
+    .slide {
         height: 255px;
+        border-radius: 10px;
     }
 
-    .carroussel-image {
-        height: 255px;
+    .leftArrow {
+        height: 24px;
     }
 
-    .carroussel-image-sombre {
-        height: 255px;
+    .rightArrow {
+        height: 24px;
     }
 
-    .carroussel-arrowleft,
-    .carroussel-arrowright {
-        width: 24px;
-        top: 45%;
-    }
-
-    .carroussel-number {
+    .displayNone {
         display: none;
     }
-
 }

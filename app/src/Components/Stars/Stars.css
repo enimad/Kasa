@@ -1,4 +1,6 @@
-.stars-wrapper {
+.starsWrapper {
+    display: flex;
+    gap: 7px;
     margin-top: 20px;
 }
 
@@ -8,8 +10,9 @@
 }
 
 @media only screen and (max-width: 1024px) {
-    .stars-wrapper {
-        margin-top: 15px;
+    .starsWrapper {
+        margin-top: 4px;
+        gap: 4px;
     }
 
     .star {

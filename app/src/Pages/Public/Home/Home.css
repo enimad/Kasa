@@ -1,3 +1,10 @@
+.bannerhome {
+    background-image: url("@/Assets/Images/Pages/Home/img_home_section.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
 .home {
     margin-top: 63px;
 }
