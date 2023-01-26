@@ -11,11 +11,9 @@ function Stars({ rating }) {
     return (
         <div className='starsWrapper'>
             {rates.map((rate) =>
-                rating >= rate ? (
-                    <img key={rate} className='star' src={PinkStar} alt="Etoile pleine" />
-                ) : (
-                    <img key={rate} className='star' src={GreyStar} alt="Etoile vide" />
-                )
+                rating >= rate
+                    ? <img key={rate} className='star' src={PinkStar} alt="Etoile pleine" />
+                    : <img key={rate} className='star' src={GreyStar} alt="Etoile vide" />
             )}
         </div>
     );
