@@ -1,12 +1,11 @@
 .banner {
     position: relative;
-    height: 100%;
-    min-height: 111px;
+    height: 223px;
     margin: 0 100px;
 }
 
 .banner-img {
-    height: 223px;
+    height: inherit;
     width: 100%;
     object-fit: cover;
     border-radius: 25px;
@@ -37,11 +36,15 @@
 
 @media only screen and (max-width: 1024px) {
     .banner {
+        height: 167px;
         margin: 0 60px;
     }
 
+    .banner-height {
+        height: 223px;
+    }
+
     .banner-img {
-        height: 164px;
         border-radius: 18px;
     }
 
@@ -56,11 +59,15 @@
 
 @media only screen and (max-width: 640px) {
     .banner {
+        height: 111px;
         margin: 0 20px;
     }
 
+    .banner-height {
+        height: 223px;
+    }
+
     .banner-img {
-        height: 111px;
         border-radius: 10px;
     }
 

@@ -5,7 +5,7 @@ import "@/Components/Profil/Profil.css";
 function Profil({ name, picture }) {
     return (
         <section className='profil'>
-            <h1 className='profil-name'>{name}</h1>
+            <h2 className='profil-name'>{name}</h2>
             <img className='profil-picture' src={picture} alt="Photographie de l'hôte" />
         </section>
     );
