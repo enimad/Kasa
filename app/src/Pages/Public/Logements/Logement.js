@@ -24,6 +24,7 @@ const Logement = () => {
 
         getInfo();
 
+        // eslint-disable-next-line
     }, [])
 
     const getInfo = async () => {
