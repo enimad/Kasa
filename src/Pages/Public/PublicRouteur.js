@@ -9,7 +9,6 @@ const PublicRouteur = () => {
     return (
         <Routes>
             <Route element={<Layout />}>
-                <Route path="/Kasa" element={<Navigate to="/home" />} />
 
                 <Route path="" element={<Navigate to="/home" />} />
 
