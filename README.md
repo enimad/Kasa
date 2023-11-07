@@ -16,7 +16,9 @@ Il s'agit d'un projet OpenClassrooms ayant pour but de développer un site en Re
 
 ### 1. Initialiser une application avec Create React App
 
-- Le projet a bien été initialisé par le CRA. Mettre en place une architecture des dossiers et un découpage du projet. 
+- Le projet a bien été initialisé par le CRA.
+
+- Mettre en place une architecture des dossiers et un découpage du projet logique. 
 
 - Toutes les pages correspondent bien aux maquettes fournies, desktop comme mobile.
 
