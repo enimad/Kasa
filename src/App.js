@@ -6,7 +6,7 @@ import PublicRouteur from './Pages/Public/PublicRouteur.js';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter basename="/kasa">
+      <BrowserRouter basename="/Kasa">
         <Routes>
           <Route path="/*" element={<PublicRouteur />} />
         </Routes>
