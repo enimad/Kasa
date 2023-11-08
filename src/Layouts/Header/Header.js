@@ -9,8 +9,8 @@ const Header = () => {
             <img className='header-logo' src={logo} alt='Kasa logo' />
             <nav>
                 <ul>
-                    <li><Link to='Home'>Accueil</Link></li>
-                    <li><Link to='A-propos'>A Propos</Link></li>
+                    <li><Link to='home'>Accueil</Link></li>
+                    <li><Link to='a-propos'>A Propos</Link></li>
                 </ul>
             </nav>
         </header>

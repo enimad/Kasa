@@ -3,7 +3,7 @@ import "./Banner.css";
 
 function Banner({ image, texte }) {
 
-    if (window.location.pathname === "/A-propos") {
+    if (window.location.pathname === "/a-propos") {
         return (
             <div className="banner banner-height">
                 <img className="banner-img" src={image} alt='Paysage naturel' />

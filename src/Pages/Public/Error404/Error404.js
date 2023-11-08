@@ -9,7 +9,7 @@ const error404 = () => {
         <section className='error404'>
             <img className='error404-logo' src={logo_404} alt='Landscape' />
             <h1>Oups! La page que vous demandez n'existe pas.</h1>
-            <p><Link to='Home'>Retourner sur la page d’accueil</Link></p>
+            <p><Link to='home'>Retourner sur la page d’accueil</Link></p>
         </section>
     );
 };

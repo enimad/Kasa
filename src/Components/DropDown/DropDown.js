@@ -11,7 +11,7 @@ function DropDown({ title, content, fontsize }) {
         setDropDown(!dropDown);
     }
 
-    if (window.location.pathname === "/A-propos") {
+    if (window.location.pathname === "/a-propos") {
         return (
             <section className='dropdown'>
                 <div className='dropdown-titre-wrapper'>
